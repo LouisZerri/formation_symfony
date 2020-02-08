@@ -13,12 +13,24 @@ class PropertyType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('description')
-            ->add('surface')
-            ->add('rooms')
-            ->add('bedrooms')
-            ->add('floor')
+            ->add('title', null, [
+                "label" => "Titre"
+            ])
+            ->add('description', null, [
+                "label" => "Description"
+            ])
+            ->add('surface', null, [
+                "label" => "Surface"
+            ])
+            ->add('rooms', null, [
+                "label" => "Pièces"
+            ])
+            ->add('bedrooms', null, [
+                "label" => "Chambres"
+            ])
+            ->add('floor', null, [
+                "label" => "Étages"
+            ])
             ->add('price')
             ->add('heat', ChoiceType::class,[
                 'choices' => $this->getChoices()
@@ -26,9 +38,15 @@ class PropertyType extends AbstractType
             ->add('city', null,[
                 "label" => "Ville"
             ])
-            ->add('address')
-            ->add('postal_code')
-            ->add('sold')
+            ->add('address', null, [
+                "label" => "Adresse"
+            ])
+            ->add('postal_code', null, [
+                "label" => "Code postal"
+            ])
+            ->add('sold', null, [
+                "label" => "Vendu"
+            ])
         ;
     }
 
