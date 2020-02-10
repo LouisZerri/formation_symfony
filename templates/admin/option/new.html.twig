@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+
+<div class="container mt-4">
+    <h2>Créer une nouvelle option</h2>
+    {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <button class="btn btn-primary">Enregistrer</button>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

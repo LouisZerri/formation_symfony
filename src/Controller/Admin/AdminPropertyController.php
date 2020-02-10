@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Option;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\PropertyRepository;
@@ -71,6 +72,12 @@ class AdminPropertyController extends AbstractController
      */
     public function edit(Property $property, Request $request)
     {
+
+        //Gestion des options
+        // $option = new Option();
+        // $property->addOption($option);
+
+
         $form = $this->createForm(PropertyType::class, $property);
 
         $form->handleRequest($request);
