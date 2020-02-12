@@ -28,5 +28,8 @@ services:
     # please note that last definitions always *replace* previous ones
     App\Controller\HomeController:
         tags: ['controller.service_arguments']
-
+    
+    App\Listener\ImageCacheSubscriber:
+        tags: 
+            - { name: doctrine.event_subscriber }
 

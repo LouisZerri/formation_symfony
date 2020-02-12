@@ -10,6 +10,7 @@ use App\Entity\Property;
 use App\Form\PropertyType;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Response;
 
 class AdminPropertyController extends AbstractController
